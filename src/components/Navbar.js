@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { BsFillCartFill } from 'react-icons/bs'
-import '../styles/navbar.css'
+import '../styles/navbar.css';
 
 const number = 12;
 

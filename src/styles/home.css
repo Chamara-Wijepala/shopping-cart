@@ -1,0 +1,29 @@
+#HomePage {
+  text-align: center;
+  padding-block: min(10vh, 10rem);
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  max-width: 500px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+@media (min-width: 420px) {
+  h1 {
+    font-size: 6rem;
+  }
+}
+
+button {
+  border: none;
+  border-radius: 2rem;
+  color: white;
+  background-color: var(--dark);
+  padding: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
