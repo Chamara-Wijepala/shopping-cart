@@ -7,15 +7,15 @@ import Products from "./pages/Products";
 function App() {
   return (
     <React.Fragment>
-      <Navbar></Navbar>
-      <main>
-        <BrowserRouter>
+      <BrowserRouter>
+        <Navbar></Navbar>
+        <main>
           <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/products" element={<Products/>} />
           </Routes>
-        </BrowserRouter>
-      </main>
+        </main>
+      </BrowserRouter>
     </React.Fragment>
   );
 };

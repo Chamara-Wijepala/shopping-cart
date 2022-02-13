@@ -8,6 +8,8 @@ const Navbar = () => {
         <h1>PokéMart</h1>
       </div>
       <div>
+        <Link to="/">Home</Link>
+        <Link to="/products">Products</Link>
       </div>
     </nav>
   );
