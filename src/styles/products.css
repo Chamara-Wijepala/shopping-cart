@@ -1,0 +1,37 @@
+.Product {
+  background-color: white;
+  max-width: 200px;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.Product img {
+  width: 100px;
+}
+
+.AmountToAdd {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid var(--dark);
+  border-radius: 7px;
+  padding: 0.5rem;
+}
+
+.AmountToAdd input {
+  outline: none;
+  width: 100%;
+  border: none;
+  text-align: center;
+}
+
+.AmountToAdd button {
+  width: 1rem;
+}
+
+.AddToCart {
+  width: 100%;
+  font-size: 1.2rem;
+  border-radius: 7px;
+  padding: 0.5rem;
+  margin-block: 0.5rem;
+}
