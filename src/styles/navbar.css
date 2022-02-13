@@ -1,0 +1,37 @@
+nav {
+  color: white;
+  background-color: var(--dark);
+  min-height: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (max-width: 480px) {
+  nav {
+    justify-content: center;
+  }
+}
+
+nav h1 {
+  color: white;
+  font-size: 2rem;
+  font-family: 'Gotham Black';
+}
+
+#NavItems {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem;
+}
+
+#NavItems * {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
