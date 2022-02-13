@@ -8,22 +8,17 @@
   margin: auto;
 }
 
-h1 {
+#Slogan {
   font-size: 4rem;
 }
 
 @media (min-width: 420px) {
-  h1 {
+  #Slogan {
     font-size: 6rem;
   }
 }
 
-button {
-  border: none;
-  border-radius: 2rem;
-  color: white;
-  background-color: var(--dark);
+#HomePage button {
   padding: 1rem;
   font-size: 2rem;
-  cursor: pointer;
 }

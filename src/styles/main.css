@@ -4,10 +4,22 @@
   --dark: #1c1c1c;
 }
 
+body {
+  background-color: whitesmoke;
+}
+
 * {
   margin: 0;
   padding: 0;
   font-family: 'Gotham', sans-serif;
   font-weight: 700;
   color: var(--dark);
+}
+
+button {
+  color: white;
+  background-color: var(--dark);
+  cursor: pointer;
+  border: none;
+  border-radius: 2rem;
 }

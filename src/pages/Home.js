@@ -5,7 +5,7 @@ import '../styles/home.css';
 const Home = () => {
   return (
     <div id="HomePage">
-      <h1>Where Smiling Faces Gather</h1>
+      <h1 id="Slogan">Where Smiling Faces Gather</h1>
       <Link to="/products">
         <button>Products</button>
       </Link>
