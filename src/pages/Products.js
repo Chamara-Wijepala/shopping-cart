@@ -1,20 +1,26 @@
 import React from "react";
+import productList from '../services/productList';
+import { GrFormAdd, GrFormSubtract } from 'react-icons/gr';
 import '../styles/products.css';
 
 const Products = () => {
+  const products = productList.map((product, index) => (
+    <div className="Product" key={index}>
+      <img src={product.sprite} alt={product.name}></img>
+      <p className="Name">{product.name}</p>
+      <p className="Price">$ {product.cost}</p>
+      <div className="AmountToAdd">
+        <button><GrFormSubtract/></button>
+        <input min="1" max="100" defaultValue={1}></input>
+        <button><GrFormAdd/></button>
+      </div>
+      <button className="AddToCart">Add To Cart</button>
+    </div>
+  ))
+
   return (
     <div id="ProductList">
-      <div className="Product">
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png" alt=""></img>
-        <p className="Name">Product</p>
-        <p className="Price">$ 200</p>
-        <div className="AmountToAdd">
-          <button>-</button>
-          <input defaultValue={1}></input>
-          <button>+</button>
-        </div>
-        <button className="AddToCart">Add To Cart</button>
-      </div>
+      { products }
     </div>
   );
 };
