@@ -5,4 +5,4 @@
 ## Built With
 * [React](https://reactjs.org/)
 * [React Icons](https://react-icons.github.io/react-icons/)
-* [pokeapi-js-wrapper](https://github.com/PokeAPI/pokeapi-js-wrapper)
+* [pokeapi](https://pokeapi.co/)
