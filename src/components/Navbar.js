@@ -8,7 +8,7 @@ const number = 12;
 const Navbar = () => {
   return (
     <nav>
-      <h1>PokéMart</h1>
+      <Link to="/" id="StoreName">PokéMart</Link>
       <div id="NavItems">
         <Link to="/">Home</Link>
         <Link to="/products">Products</Link>

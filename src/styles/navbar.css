@@ -16,10 +16,11 @@ nav {
   }
 }
 
-nav h1 {
+#StoreName {
   color: white;
   font-size: 2rem;
   font-family: 'Gotham Black';
+  text-decoration: none;
 }
 
 #NavItems {
@@ -34,11 +35,17 @@ nav h1 {
   color: white;
   text-decoration: none;
   font-size: 1rem;
+  transition: transform 0.2s ease;
+}
+
+#NavItems *:hover {
+  transform: scale(1.1);
 }
 
 #CartItems {
   display: flex;
   gap: 0.5rem;
+  cursor: pointer;
 }
 
 #ItemNumber {

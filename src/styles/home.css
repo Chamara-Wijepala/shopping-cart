@@ -21,4 +21,9 @@
 #HomePage button {
   padding: 1rem;
   font-size: 2rem;
+  transition: transform 0.2s ease;
+}
+
+#HomePage button:hover {
+  transform: scale(1.1);
 }
