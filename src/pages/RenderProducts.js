@@ -2,7 +2,7 @@ import React from "react";
 import productList from '../services/productList';
 import { GrFormAdd, GrFormSubtract } from 'react-icons/gr';
 
-const RenderProducts = () => {
+const RenderProducts = ({ handleChange, itemQuantity }) => {
   return (
     productList.map((product, index) => (
       <div className="Product" key={index}>
@@ -11,7 +11,12 @@ const RenderProducts = () => {
         <p className="Price">$ {product.cost}</p>
         <div className="AmountToAdd">
           <GrFormSubtract />
-          <input min="1" max="100" defaultValue={1}></input>
+          <input
+            id={index}
+            value={itemQuantity.index}
+            defaultValue="1"
+            onChange={handleChange}
+          ></input>
           <GrFormAdd />
         </div>
         <button className="AddToCart">Add To Cart</button>
