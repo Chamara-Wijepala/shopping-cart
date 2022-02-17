@@ -2,7 +2,9 @@ import React from "react";
 import productList from '../services/productList';
 import { GrFormAdd, GrFormSubtract } from 'react-icons/gr';
 
-const RenderProducts = ({ handleChange, itemQuantity }) => {
+const RenderProducts = (props) => {
+  const { handleClick, handleChange, itemQuantity } = props;
+
   return (
     productList.map((product, index) => (
       <div className="Product" key={index}>
@@ -10,14 +12,19 @@ const RenderProducts = ({ handleChange, itemQuantity }) => {
         <p className="Name">{product.name}</p>
         <p className="Price">$ {product.cost}</p>
         <div className="AmountToAdd">
-          <GrFormSubtract />
+          <GrFormSubtract data-operator="-" onClick={(e) => {
+            handleClick(e.target.nextSibling, e.target.dataset.operator)
+          }} />
           <input
             id={index}
-            value={itemQuantity.index}
-            defaultValue="1"
-            onChange={handleChange}
+            value={itemQuantity[index] || 1}
+            onChange={(e) => {
+              handleChange(e.target.id, Number(e.target.value))
+            }}
           ></input>
-          <GrFormAdd />
+          <GrFormAdd data-operator="+" onClick={(e) => {
+            handleClick(e.target.previousSibling, e.target.dataset.operator)
+          }} />
         </div>
         <button className="AddToCart">Add To Cart</button>
       </div>
