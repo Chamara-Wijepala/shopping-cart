@@ -10,9 +10,9 @@ const Navbar = () => {
     <nav>
       <Link to="/" id="StoreName">PokéMart</Link>
       <div id="NavItems">
-        <Link to="/">Home</Link>
-        <Link to="/products">Products</Link>
-        <div id="CartItems">
+        <Link to="/" className="NavItem">Home</Link>
+        <Link to="/products" className="NavItem">Products</Link>
+        <div id="CartItems" className="NavItem">
           <div id="ItemNumber">{number}</div>
           <BsFillCartFill/>
         </div>
