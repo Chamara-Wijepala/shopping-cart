@@ -6,7 +6,7 @@
   align-items: center;
   gap: 1rem;
   min-height: 100%;
-  max-width: 50rem;
+  max-width: 30rem;
   background-color: #eeeeee;
   border-radius: 5px;
 }
@@ -14,6 +14,7 @@
 #CheckoutList {
   min-height: 50vh;
   width: 80%;
+  padding: 1rem;
   margin: auto;
   border-radius: 5px;
   background-color: white;
@@ -28,4 +29,35 @@
   width: 80%;
   font-size: 1rem;
   border-radius: 5px;
+}
+
+.CheckoutItem {
+  border-radius: 5px;
+  border: 1px solid #777777;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.CheckoutItemQuantity {
+  position: absolute;
+  bottom: 0;
+}
+
+.ItemImg {
+  height: 4rem;
+  width: 4rem;
+  background-color: #cccccc;
+}
+
+.ItemInfo {
+  min-height: 4rem;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 1rem;
+  background-color: #eeeeee;
 }
