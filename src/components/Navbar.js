@@ -12,10 +12,10 @@ const Navbar = () => {
       <div id="NavItems">
         <Link to="/" className="NavItem">Home</Link>
         <Link to="/products" className="NavItem">Products</Link>
-        <div id="CartItems" className="NavItem">
+        <Link to="/checkout" id="CartItems" className="NavItem">
           <div id="ItemNumber">{number}</div>
           <BsFillCartFill/>
-        </div>
+        </Link>
       </div>
     </nav>
   );
