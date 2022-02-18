@@ -9,11 +9,12 @@
 }
 
 .Product {
-  background-color: white;
+  background-color: #cccccc;
   max-width: 200px;
   text-align: center;
   padding: 0.5rem;
-  border-radius: 5px;
+  border-radius: 10px;
+  border: 1px solid #777777;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -28,9 +29,10 @@
 .AmountToAdd {
   display: flex;
   justify-content: space-between;
-  border: 1px solid var(--dark);
+  border: 1px solid #777777;
   border-radius: 7px;
   padding: 0.5rem;
+  background-color: #eeeeee;
 }
 
 .AmountToAdd input {
@@ -38,6 +40,7 @@
   width: 100%;
   border: none;
   text-align: center;
+  background-color: #eeeeee;
 }
 
 .AmountToAdd button {
