@@ -12,7 +12,7 @@ const RenderCheckoutItems = ({ cart }) => {
         />
         <div className="ItemInfo">
           <p>{item.name}</p>
-          <p>$ {item.cost}</p>
+          <p>$ {item.cost * item.quantity}</p>
         </div>
       </div>
     ))
