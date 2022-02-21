@@ -25,8 +25,12 @@ const Products = ({ cart, setCart }) => {
     const itemToAdd = products.find(product => (
       product.id === id
     ));
-      
-    setCart([ ...cart, itemToAdd ]);
+
+    const newCart = cart.filter(item => (
+      item.id !== itemToAdd.id
+    ));
+
+    setCart([ ...newCart, itemToAdd ]);
   };
 
   return (
