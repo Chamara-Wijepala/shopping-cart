@@ -1,32 +1,29 @@
 import React, { useState } from "react";
 import RenderProducts from "./RenderProducts";
+import productList from "../services/productList";
 import '../styles/products.css';
 
 const Products = () => {
-  const [ itemQuantity, setItemQuantity ] = useState({});
+  const [ products, setProducts ] = useState(productList);
 
-  function handleChange(id, value) {
-    if ( !(value < 1) ) {
-      setItemQuantity(prevItems => (
-        { ...prevItems, [id]: value }
-      ));
+  function handleChange(id, value, delta) {
+    if ( value < 1 ) {
+      value = 1;
+    }
+    else if ( value <= 1 && delta < 1 ) {
+      delta = 0;
     };
-  };
 
-  function handleClick(input, operator) {
-    const id = input.id;
-    const value = Number(input.value);
-
-    if ( !(value < 1) ) {
-      operator === "+"
-        ? setItemQuantity({ ...itemQuantity, [id]: value + 1 })
-        : setItemQuantity({ ...itemQuantity, [id]: value - 1 });
-    };
+    setProducts(products.map(product => (
+      product.id === id
+        ? { ...product, quantity: value + delta }
+        : product
+    )));
   };
 
   return (
     <div id="ProductList">
-      <RenderProducts {...{handleClick, handleChange, itemQuantity}} />
+      <RenderProducts {...{handleChange, products}} />
     </div>
   );
 };
