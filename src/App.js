@@ -11,7 +11,7 @@ function App() {
   return (
     <React.Fragment>
       <BrowserRouter>
-        <Navbar></Navbar>
+        <Navbar {...{cart}} />
         <main>
           <Routes>
             <Route path="/" element={<Home/>} />

@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 import { BsFillCartFill } from 'react-icons/bs'
 import '../styles/navbar.css';
 
-const number = 12;
-
-const Navbar = () => {
+const Navbar = ({ cart }) => {
   return (
     <nav>
       <Link to="/" id="StoreName">PokéMart</Link>
@@ -13,7 +11,7 @@ const Navbar = () => {
         <Link to="/" className="NavItem">Home</Link>
         <Link to="/products" className="NavItem">Products</Link>
         <Link to="/checkout" id="CartItems" className="NavItem">
-          <div id="ItemNumber">{number}</div>
+          <div id="ItemNumber">{cart.length}</div>
           <BsFillCartFill/>
         </Link>
       </div>
