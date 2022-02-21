@@ -1,10 +1,16 @@
 import React from "react";
-import RenderCheckout from "./RenderCheckout";
+import RenderCheckoutItems from "./RenderCheckoutItems";
 import '../styles/checkout.css';
 
-const Checkout = () => {
+const Checkout = ({ cart }) => {
   return (
-    <RenderCheckout />
+    <div id="Checkout">
+      <div id="CheckoutList">
+      <RenderCheckoutItems {...{cart}}/>
+      </div>
+      <p id="TotalPrice">Total: $ 1200</p>
+      <button id="CheckoutButton">Checkout</button>
+    </div>
   );
 };
 
