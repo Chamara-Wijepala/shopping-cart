@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RenderCheckout = ({ cart }) => {
+const RenderCheckout = ({ cart, totalPrice }) => {
   const cartItems = cart.map((item, index) => (
     <div className="CheckoutItem" key={index}>
       <div className="CheckoutItemQuantity">{item.quantity}</div>
@@ -21,7 +21,7 @@ const RenderCheckout = ({ cart }) => {
       <div id="CheckoutList">
         { cartItems }
       </div>
-      <p id="TotalPrice">Total: $ 1200</p>
+      <p id="TotalPrice">Total: $ {totalPrice}</p>
       <button id="CheckoutButton">Checkout</button>
     </div>
   );
