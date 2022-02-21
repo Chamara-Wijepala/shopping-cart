@@ -1,7 +1,7 @@
 import React from "react";
 import { GrFormAdd, GrFormSubtract } from 'react-icons/gr';
 
-const RenderProducts = ({ handleChange, products }) => {
+const RenderProducts = ({ handleChange, products, addToCart }) => {
 
   return (
     products.map((product, index) => (
@@ -12,8 +12,7 @@ const RenderProducts = ({ handleChange, products }) => {
         <div className="AmountToAdd">
           <GrFormSubtract onClick={(e) => {handleChange(
               product.id, Number(e.target.nextSibling.value), -1
-            )
-          }} />
+          )}} />
           <input
             value={product.quantity}
             onChange={(e) => {
@@ -22,10 +21,11 @@ const RenderProducts = ({ handleChange, products }) => {
           ></input>
           <GrFormAdd onClick={(e) => {handleChange(
               product.id, Number(e.target.previousSibling.value), +1
-            )
-          }} />
+          )}} />
         </div>
-        <button className="AddToCart">Add To Cart</button>
+        <button className="AddToCart" onClick={() => {
+          addToCart(product.id)
+        }}>Add To Cart</button>
       </div>
     ))
   );

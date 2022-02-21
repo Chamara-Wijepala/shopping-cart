@@ -3,7 +3,7 @@ import RenderProducts from "./RenderProducts";
 import productList from "../services/productList";
 import '../styles/products.css';
 
-const Products = () => {
+const Products = ({ cart, setCart }) => {
   const [ products, setProducts ] = useState(productList);
 
   function handleChange(id, value, delta) {
@@ -21,9 +21,17 @@ const Products = () => {
     )));
   };
 
+  function addToCart(id) {
+    const itemToAdd = products.find(product => (
+      product.id === id
+    ));
+      
+    setCart([ ...cart, itemToAdd ]);
+  };
+
   return (
     <div id="ProductList">
-      <RenderProducts {...{handleChange, products}} />
+      <RenderProducts {...{handleChange, products, addToCart}} />
     </div>
   );
 };
