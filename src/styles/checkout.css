@@ -29,6 +29,11 @@
   width: 80%;
   font-size: 1rem;
   border-radius: 5px;
+  transition: transform 0.2s ease;
+}
+
+#CheckoutButton:hover {
+  transform: scale(1.1);
 }
 
 .CheckoutItem {
@@ -39,6 +44,7 @@
   width: 100%;
   position: relative;
   margin-bottom: 1rem;
+  background-color: #eeeeee;
 }
 
 .CheckoutItemQuantity {
@@ -59,5 +65,16 @@
   flex-direction: column;
   justify-content: space-evenly;
   padding-left: 1rem;
-  background-color: #eeeeee;
+}
+
+.DeleteItem {
+  margin: 0.5rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.DeleteItem:hover {
+  transform: scale(1.1);
 }
