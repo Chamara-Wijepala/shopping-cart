@@ -22,15 +22,29 @@ const Products = ({ cart, setCart }) => {
   };
 
   function addToCart(id) {
-    const itemToAdd = products.find(product => (
+    const findItem = products.find(product => (
       product.id === id
     ));
+
+    const itemToAdd = { ...findItem };
+
+    const alreadyInCart = cart
+      .map(item => item.id)
+      .includes(itemToAdd.id);
+
+    if ( alreadyInCart ) {
+      const itemInCart = cart.find(item => item.id === itemToAdd.id)
+
+      itemToAdd.quantity += itemInCart.quantity;
+    };
 
     const newCart = cart.filter(item => (
       item.id !== itemToAdd.id
     ));
-
+      
     setCart([ ...newCart, itemToAdd ]);
+
+    findItem.quantity = 1;
   };
 
   return (
