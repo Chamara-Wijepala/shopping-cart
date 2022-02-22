@@ -6,9 +6,9 @@ import '../styles/navbar.css';
 const Navbar = ({ cart }) => {
   return (
     <nav>
-      <Link to="/" id="StoreName">PokéMart</Link>
+      <Link to="/shopping-cart" id="StoreName">PokéMart</Link>
       <div id="NavItems">
-        <Link to="/" className="NavItem">Home</Link>
+        <Link to="/shopping-cart" className="NavItem">Home</Link>
         <Link to="/products" className="NavItem">Products</Link>
         <Link to="/checkout" id="CartItems" className="NavItem">
           <div id="ItemNumber">{cart.length}</div>
