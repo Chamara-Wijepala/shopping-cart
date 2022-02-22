@@ -1,9 +1,9 @@
 import React from 'react';
 import { RiDeleteBin2Fill } from 'react-icons/ri';
 
-const RenderCheckout = ({ cart, totalPrice }) => {
+const RenderCheckout = ({ cart, totalPrice, handleDelete }) => {
   const cartItems = cart.map((item, index) => (
-    <div className="CheckoutItem" key={index}>
+    <div className="CheckoutItem" key={index} id={item.id}>
       <div className="CheckoutItemQuantity">{item.quantity}</div>
       <img
         className="ItemImg"
@@ -14,7 +14,9 @@ const RenderCheckout = ({ cart, totalPrice }) => {
         <p>{item.name}</p>
         <p>$ {item.cost * item.quantity}</p>
       </div>
-      <RiDeleteBin2Fill className='DeleteItem' />
+      <RiDeleteBin2Fill className='DeleteItem' onClick={() => {
+        handleDelete(item.id)
+      }} />
     </div>
   ));
 

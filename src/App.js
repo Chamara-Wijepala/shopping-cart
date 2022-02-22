@@ -19,7 +19,10 @@ function App() {
               path="/products"
               element={<Products {...{cart, setCart}}/>}
             />
-            <Route path="/checkout" element={<Checkout {...{cart}}/>} />
+            <Route
+              path="/checkout"
+              element={<Checkout {...{cart, setCart}}/>}
+            />
           </Routes>
         </main>
       </BrowserRouter>
